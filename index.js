@@ -11,16 +11,16 @@ function distanceFromHqInFeet(distance) {
   return distanceFromHqInBlocks(distance) * 264
 }
 
-function distanceTravelledInFeet (start, end) {
-  if (start < end) {
-    return (end - start) * 264;
+function distanceTravelledInFeet (start, destination) {
+  if (start < destination) {
+    return (destination - start) * 264;
   } else {
-    return (start - end) * 264;
+    return (start - destination) * 264;
   }
 }
 
 function calculatesFarePrice (start, destination) {
-  const distance = distanceTravelledInFeet (start, end);
+  const distance = distanceTravelledInFeet (start, destination);
 
   if (distance <= 400) {
     return 0;
